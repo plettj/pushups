@@ -1,10 +1,9 @@
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
-import 'firebase/firestore';
-import 'firebase/auth';
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyALDFaj84qeJR7YJQJ7Hh71PRPtbNclpuk",
   authDomain: "pushups-mental-health.firebaseapp.com",
@@ -16,9 +15,17 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-const auth = firebaseApp.auth();
-const analytics = getAnalytics(app);
-const db = firebase.firestore();
+const app = initializeApp(firebaseConfig);
 
-export default db;
+// Get Firebase services
+const db = getFirestore(app);
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
+const analytics = getAnalytics(app);
+
+export {
+  db,
+  auth,
+  analytics,
+  googleProvider
+};

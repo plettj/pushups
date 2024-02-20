@@ -1,10 +1,19 @@
 <script>
-  import { db } from './firebase';
+  import { writable } from 'svelte/store';
   import PushupCounter from './components/PushupCounter.svelte';
+  import Navigation from './components/Navigation.svelte';
+  
+  let userEmail = writable(null); // This remains as your reactive store for user email
+
+  // Function to update userEmail based on event from Navigation
+  function handleUserChange(event) {
+    userEmail.set(event.detail.userEmail);
+  }
 </script>
   
 <main>
-	<PushupCounter />
+  <Navigation on:userChanged={handleUserChange} />
+  <PushupCounter userEmail={$userEmail} />
 </main>
 
 <style>
