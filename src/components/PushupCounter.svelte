@@ -62,9 +62,7 @@ onMount(() => fetchData());
     {#if userEmail === 'jlplett303@gmail.com'}
       <input 
         type="number" 
-        bind:value={valueToAdd} 
-        min="-100"
-        max="500" 
+        bind:value={valueToAdd}
         placeholder="Value to add"
         disabled={adding} />
       <button 
