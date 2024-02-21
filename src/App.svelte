@@ -2,6 +2,7 @@
   import { writable } from 'svelte/store';
   import PushupCounter from './components/PushupCounter.svelte';
   import Navigation from './components/Navigation.svelte';
+  import Information from './components/Information.svelte';
   
   let userEmail = writable(null); // This remains as your reactive store for user email
 
@@ -14,6 +15,7 @@
 <main>
   <Navigation on:userChanged={handleUserChange} />
   <PushupCounter userEmail={$userEmail} />
+  <Information />
 </main>
 
 <style>
