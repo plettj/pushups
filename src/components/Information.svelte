@@ -1,7 +1,8 @@
 <script>
   let milestones = [
     { pushups: 1000, description: "Will be doing a pushup in SLC at lunchtime, shirtless and oiled up." },
-    { pushups: 2000, description: "[haven't reached this milestone]", greyedOut: true },
+    { pushups: 2000, description: "*Not decided yet*" },
+    { pushups: 3000, description: "[haven't reached this milestone]", greyedOut: true },
   ];
 </script>
 

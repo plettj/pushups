@@ -75,6 +75,8 @@ onMount(() => fetchData());
         disabled={adding || valueToAdd <= 0}>
         Add {"$" + valueToAdd || 'some'} donations
       </button>
+    {:else}
+      <p>Thanks for logging in! Your new action options are: log out.</p>
     {/if}
   {:else}
     <p>{error}</p>
