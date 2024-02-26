@@ -21,6 +21,9 @@
       <td class={milestone.greyedOut ? "grey" : ""}>{milestone.description}</td>
     {/each}
   </div>
+
+  <!-- Pushups for Running across Canada -->
+  <!-- <a href="https://gofund.me/b5442f80">Donate to Keenan to support his run!</a>-->
 </main>
 
 <style>
