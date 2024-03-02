@@ -1,7 +1,7 @@
 <script>
   let milestones = [
-    { pushups: 1000, description: "Will be doing a pushup in SLC at lunchtime, shirtless and oiled up." },
-    { pushups: 2000, description: "*Not decided yet*" },
+    { pushups: 1000, description: "Shirtless Pushups in SLC at lunchtime! <a href='https://www.reddit.com/r/uwaterloo/comments/1b47yl2/the_1000th_pushup_shirtless_in_slc_like_you_voted/'>Reddit Recap</a>." },
+    { pushups: 2000, description: "Undecided; Reddit is voting <a href='https://www.reddit.com/r/uwaterloo/comments/1b483jo/reddit_tell_us_how_to_do_our_2000th_pushup_for/'>here</a>." },
     { pushups: 3000, description: "[haven't reached this milestone]", greyedOut: true },
   ];
 </script>
@@ -18,7 +18,7 @@
   <div id="Milestones">
     {#each milestones as milestone}
       <p><b>{milestone.pushups}th Pushup</b></p>
-      <td class={milestone.greyedOut ? "grey" : ""}>{milestone.description}</td>
+      <td class={milestone.greyedOut ? "grey" : ""}>{@html milestone.description}</td>
     {/each}
   </div>
 
