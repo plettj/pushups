@@ -16,7 +16,11 @@ Press: [Imprint Article](https://uwimprint.ca/article/the-wellness-warriors-push
 
 ### What is it built with?
 
-Firebase hosting, Firestore, Google Authentication, Github CI
+- [Sveltekit](https://kit.svelte.dev/)
+- [Firebase hosting](https://firebase.google.com/docs/hosting)
+- [Firestore](https://firebase.google.com/docs/firestore)
+- [Google OAuth](https://developers.google.com/identity/protocols/oauth2)
+- [Github CI](https://docs.github.com/en/actions/automating-builds-and-tests/about-continuous-integration)
 
 ##### Installing and Deploying
 
